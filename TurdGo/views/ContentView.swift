@@ -16,7 +16,7 @@ struct ContentView: View {
             
             if (showLocations == false) {
                 LocationSearchView()
-                    .padding(.top, 70)
+                    .padding()
                     .onTapGesture { //when this is pressed ...
                         showLocations = true
                     }
@@ -24,9 +24,10 @@ struct ContentView: View {
                 AddressListView()
             }
             
-            NavButton(showLocationSearch: $showLocations)
-                .padding(.leading)
-                .padding(.top, 4)
+            
+//            NavButton(showLocationSearch: $showLocations)
+//                .padding(.leading)
+//                .padding(.top, 4)
         }
         
     }

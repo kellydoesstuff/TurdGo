@@ -12,8 +12,9 @@ struct NavButton: View {
     var body: some View {
         Button {
             showLocationSearch = false
+            
         } label : {
-            Image(systemName: showLocationSearch ? "arrow.left" : "line.3.horizontal")
+            Image(systemName:"arrow.left")
                 .font(.title2)
                 .foregroundColor(.black)
                 .padding()

@@ -9,14 +9,19 @@ import SwiftUI
 
 struct AddressListView: View {
     @State private var destinationLocation = ""
+    @State private var showLocationSearch = true
     var body: some View {
         VStack {
+//            NavButton(showLocationSearch: $showLocationSearch)
+//                .padding(.leading)
+//                .padding(.top, 4)
+                
             TextField("What Location?", text : $destinationLocation)
                 .foregroundColor(.black)
                 .frame(width: 335, height:32)
                 .background(Color(.systemGray4))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.top, 55)
+                .padding(.top, 20)
                 .padding(.vertical, 15)
                 
             
