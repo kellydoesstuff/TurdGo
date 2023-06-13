@@ -15,7 +15,7 @@ struct LocationSearchView: View {
                 .frame(width:8, height : 8)
                 .padding(.horizontal)
             
-            Text("Where to?")
+            Text("Which Restroom?")
                 .foregroundColor(Color(.black))
             
             Spacer()

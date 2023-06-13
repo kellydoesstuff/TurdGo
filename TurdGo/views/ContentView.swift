@@ -8,27 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showLocations = false
     var body: some View {
-        ZStack (alignment: .top) {
-            MapViewRepresentable()
-                .ignoresSafeArea()
-            
-            if (showLocations == false) {
-                LocationSearchView()
-                    .padding()
-                    .onTapGesture { //when this is pressed ...
-                        showLocations = true
+        NavigationStack {
+            ZStack{
+                Color("yellow")
+                    .ignoresSafeArea()
+                VStack {
+                    Text("TurdGo")
+                        .font(.custom("CarterOne", size: 90))
+                        .foregroundColor(Color("blue"))
+                    Text("Helping you find clean bathrooms on the go.")
+                        .padding(.bottom, 20)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("blue"))
+                        .multilineTextAlignment(.center)
+                    
+                    
+                    HStack {
+                        Image("toilet")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        NavigationLink(destination: IntroView()){
+                            Image(systemName: "arrow.right")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color("blue"))
+                                .clipShape(Circle())
+                                .shadow(color: .black, radius: 3)
+                            
+                        } //end of navlink
+                        
+                        
+                        
+
                     }
-            } else {
-                AddressListView()
-            }
+                        
+                } // end of vstack
+                .padding()
+    
+                
+            } // end of zstack
+
             
             
-//            NavButton(showLocationSearch: $showLocations)
-//                .padding(.leading)
-//                .padding(.top, 4)
-        }
+        } // nav stack
+        
         
     }
 }
