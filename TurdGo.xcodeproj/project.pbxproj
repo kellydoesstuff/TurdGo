@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		AFDF9E252A37F97400E60BB8 /* TurdGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E242A37F97400E60BB8 /* TurdGoApp.swift */; };
-		AFDF9E272A37F97400E60BB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E262A37F97400E60BB8 /* ContentView.swift */; };
 		AFDF9E292A37F9BD00E60BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDF9E282A37F9BD00E60BB8 /* Assets.xcassets */; };
 		AFDF9E2C2A37F9BD00E60BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDF9E2B2A37F9BD00E60BB8 /* Preview Assets.xcassets */; };
+		AFDF9E332A37FF2E00E60BB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */; };
+		AFDF9E352A37FF6400E60BB8 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E342A37FF6400E60BB8 /* MapViewRepresentable.swift */; };
+		AFDF9E372A38030A00E60BB8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E362A38030A00E60BB8 /* LocationManager.swift */; };
+		AFDF9E532A382BB500E60BB8 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */; };
+		AFDF9E572A382E2700E60BB8 /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E562A382E2700E60BB8 /* NavButton.swift */; };
+		AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E582A382F6100E60BB8 /* AddressListView.swift */; };
+		AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFDF9E212A37F97400E60BB8 /* TurdGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurdGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDF9E242A37F97400E60BB8 /* TurdGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurdGoApp.swift; sourceTree = "<group>"; };
-		AFDF9E262A37F97400E60BB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFDF9E282A37F9BD00E60BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFDF9E2B2A37F9BD00E60BB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFDF9E342A37FF6400E60BB8 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		AFDF9E362A38030A00E60BB8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		AFDF9E562A382E2700E60BB8 /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
+		AFDF9E582A382F6100E60BB8 /* AddressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListView.swift; sourceTree = "<group>"; };
+		AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,9 @@
 		AFDF9E232A37F97400E60BB8 /* TurdGo */ = {
 			isa = PBXGroup;
 			children = (
+				AFDF9E552A382DA700E60BB8 /* views */,
+				AFDF9E542A382D8500E60BB8 /* map */,
 				AFDF9E242A37F97400E60BB8 /* TurdGoApp.swift */,
-				AFDF9E262A37F97400E60BB8 /* ContentView.swift */,
 				AFDF9E282A37F9BD00E60BB8 /* Assets.xcassets */,
 				AFDF9E2A2A37F9BD00E60BB8 /* Preview Content */,
 			);
@@ -65,6 +78,27 @@
 				AFDF9E2B2A37F9BD00E60BB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AFDF9E542A382D8500E60BB8 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				AFDF9E342A37FF6400E60BB8 /* MapViewRepresentable.swift */,
+				AFDF9E362A38030A00E60BB8 /* LocationManager.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		AFDF9E552A382DA700E60BB8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */,
+				AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */,
+				AFDF9E562A382E2700E60BB8 /* NavButton.swift */,
+				AFDF9E582A382F6100E60BB8 /* AddressListView.swift */,
+				AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFDF9E272A37F97400E60BB8 /* ContentView.swift in Sources */,
+				AFDF9E372A38030A00E60BB8 /* LocationManager.swift in Sources */,
+				AFDF9E332A37FF2E00E60BB8 /* ContentView.swift in Sources */,
+				AFDF9E532A382BB500E60BB8 /* LocationSearchView.swift in Sources */,
+				AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */,
+				AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */,
+				AFDF9E572A382E2700E60BB8 /* NavButton.swift in Sources */,
+				AFDF9E352A37FF6400E60BB8 /* MapViewRepresentable.swift in Sources */,
 				AFDF9E252A37F97400E60BB8 /* TurdGoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +309,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TurdGo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +338,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TurdGo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
