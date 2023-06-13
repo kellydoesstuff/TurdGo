@@ -19,6 +19,7 @@
 		AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */; };
 		BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */; };
 		BDEBEB612A38C0D6002ED40B /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */; };
+		BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		BDEBEB5E2A38C095002ED40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarterOne-Regular.ttf"; sourceTree = "<group>"; };
+		BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */,
 				BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */,
+				BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */,
 				AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */,
 				AFDF9E562A382E2700E60BB8 /* NavButton.swift */,
 				AFDF9E582A382F6100E60BB8 /* AddressListView.swift */,
@@ -193,6 +196,7 @@
 				AFDF9E532A382BB500E60BB8 /* LocationSearchView.swift in Sources */,
 				AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */,
 				AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */,
+				BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */,
 				BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */,
 				AFDF9E572A382E2700E60BB8 /* NavButton.swift in Sources */,
 				AFDF9E352A37FF6400E60BB8 /* MapViewRepresentable.swift in Sources */,
