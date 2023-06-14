@@ -8,6 +8,8 @@
 import SwiftUI
 
 @main
+
+
 struct TurdGoApp: App {
     var body: some Scene {
         WindowGroup {
