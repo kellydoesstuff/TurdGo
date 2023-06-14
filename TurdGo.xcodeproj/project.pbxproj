@@ -18,6 +18,7 @@
 		AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E582A382F6100E60BB8 /* AddressListView.swift */; };
 		AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */; };
 		AFDF9E5D2A3977D900E60BB8 /* LocationSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5C2A3977D900E60BB8 /* LocationSearchModel.swift */; };
+		BD80E3AE2A3A35F500F1A385 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3AD2A3A35F500F1A385 /* NameView.swift */; };
 		BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */; };
 		BDEBEB612A38C0D6002ED40B /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */; };
 		BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */; };
@@ -36,6 +37,7 @@
 		AFDF9E582A382F6100E60BB8 /* AddressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListView.swift; sourceTree = "<group>"; };
 		AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScroll.swift; sourceTree = "<group>"; };
 		AFDF9E5C2A3977D900E60BB8 /* LocationSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchModel.swift; sourceTree = "<group>"; };
+		BD80E3AD2A3A35F500F1A385 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		BDEBEB5E2A38C095002ED40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarterOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */,
+				BD80E3AD2A3A35F500F1A385 /* NameView.swift */,
 				BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */,
 				AFDF9E582A382F6100E60BB8 /* AddressListView.swift */,
 				BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */,
@@ -199,6 +202,7 @@
 				AFDF9E532A382BB500E60BB8 /* LocationSearchView.swift in Sources */,
 				AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */,
 				AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */,
+				BD80E3AE2A3A35F500F1A385 /* NameView.swift in Sources */,
 				BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */,
 				BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */,
 				AFDF9E5D2A3977D900E60BB8 /* LocationSearchModel.swift in Sources */,
