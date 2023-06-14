@@ -9,20 +9,34 @@ import SwiftUI
 
 struct IntroView: View {
     @State private var showLocations = false
+    @State private var showComments = false
     var body: some View {
         
         ZStack (alignment: .top) {
             MapViewRepresentable()
                 .ignoresSafeArea()
             
+            // if you are not searching for location
             if (showLocations == false) {
+                // show button
                 LocationSearchView()
-                    .padding()
                     .onTapGesture { //when this is pressed ...
-                        showLocations = true
+                        withAnimation {
+                            showLocations = true
+                        }
                     }
+                    .padding()
             } else {
-                AddressListView()
+                // show locations
+                AddressListView(showComment: $showComments)
+                    
+            }
+            
+            if (showComments) {
+                withAnimation {
+                    MakeComment(genderNeutral: false, wheelChairAccessible: false, babyChangingStations: false)
+                }
+                
             }
             
             

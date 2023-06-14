@@ -17,6 +17,7 @@
 		AFDF9E572A382E2700E60BB8 /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E562A382E2700E60BB8 /* NavButton.swift */; };
 		AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E582A382F6100E60BB8 /* AddressListView.swift */; };
 		AFDF9E5B2A3832C800E60BB8 /* AddressScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */; };
+		AFDF9E5D2A3977D900E60BB8 /* LocationSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF9E5C2A3977D900E60BB8 /* LocationSearchModel.swift */; };
 		BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */; };
 		BDEBEB612A38C0D6002ED40B /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */; };
 		BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */; };
@@ -34,6 +35,7 @@
 		AFDF9E562A382E2700E60BB8 /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 		AFDF9E582A382F6100E60BB8 /* AddressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListView.swift; sourceTree = "<group>"; };
 		AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScroll.swift; sourceTree = "<group>"; };
+		AFDF9E5C2A3977D900E60BB8 /* LocationSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchModel.swift; sourceTree = "<group>"; };
 		BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		BDEBEB5E2A38C095002ED40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarterOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				AFDF9E342A37FF6400E60BB8 /* MapViewRepresentable.swift */,
 				AFDF9E362A38030A00E60BB8 /* LocationManager.swift */,
+				AFDF9E5C2A3977D900E60BB8 /* LocationSearchModel.swift */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -101,12 +104,12 @@
 		AFDF9E552A382DA700E60BB8 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */,
-				BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */,
-				BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */,
 				AFDF9E322A37FF2E00E60BB8 /* ContentView.swift */,
-				AFDF9E562A382E2700E60BB8 /* NavButton.swift */,
+				BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */,
 				AFDF9E582A382F6100E60BB8 /* AddressListView.swift */,
+				BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */,
+				AFDF9E522A382BB500E60BB8 /* LocationSearchView.swift */,
+				AFDF9E562A382E2700E60BB8 /* NavButton.swift */,
 				AFDF9E5A2A3832C800E60BB8 /* AddressScroll.swift */,
 			);
 			path = views;
@@ -198,6 +201,7 @@
 				AFDF9E592A382F6100E60BB8 /* AddressListView.swift in Sources */,
 				BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */,
 				BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */,
+				AFDF9E5D2A3977D900E60BB8 /* LocationSearchModel.swift in Sources */,
 				AFDF9E572A382E2700E60BB8 /* NavButton.swift in Sources */,
 				AFDF9E352A37FF6400E60BB8 /* MapViewRepresentable.swift in Sources */,
 				AFDF9E252A37F97400E60BB8 /* TurdGoApp.swift in Sources */,
@@ -332,6 +336,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TurdGo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -362,6 +367,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TurdGo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "User location is needed when only using the app. Your location will be used to find bathrooms near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

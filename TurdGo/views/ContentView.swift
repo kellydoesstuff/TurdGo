@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("TurdGo")
                         .font(.custom("CarterOne", size: 90))
                         .foregroundColor(Color("blue"))
-                    Text("Helping you find clean bathrooms on the go.")
+                    Text("Helping you find the best bathrooms on the go.")
                         .padding(.bottom, 20)
                         .font(.headline)
                         .fontWeight(.bold)

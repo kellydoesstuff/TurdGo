@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AddressScroll: View {
+    let name : String
+    let address : String
     var body: some View {
         HStack {
+            
             Image(systemName: "mappin.circle.fill")
                 .resizable()
                 .foregroundColor(.blue)
@@ -17,10 +20,10 @@ struct AddressScroll: View {
                 .frame(width:40, height: 40)
         
             VStack(alignment: .leading) {
-                Text("Burger King")
+                Text(name)
                     .font(.body)
                 
-                Text("123 Your Mom")
+                Text(address)
                     .font(.system(size : 15))
                     .foregroundColor(.gray)
                 
@@ -35,6 +38,6 @@ struct AddressScroll: View {
 
 struct AddressScroll_Previews: PreviewProvider {
     static var previews: some View {
-        AddressScroll()
+        AddressScroll(name : "", address: "")
     }
 }

@@ -9,34 +9,44 @@ import SwiftUI
 
 struct AddressListView: View {
     @State private var destinationLocation = ""
-    @State private var showLocationSearch = true
+    @Binding var showComment : Bool
+    @StateObject var viewModel = LocationSearchModel()
+    
     var body: some View {
         VStack {
 //            NavButton(showLocationSearch: $showLocationSearch)
 //                .padding(.leading)
 //                .padding(.top, 4)
+
                 
-            TextField("What Location?", text : $destinationLocation)
+            TextField("What Location?", text : $viewModel.queryFragment)
                 .foregroundColor(.black)
-                .frame(width: 335, height:32)
-                .background(Color(.systemGray4))
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.top, 20)
-                .padding(.vertical, 15)
+//                .frame(width: 335, height:32)
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding()
+                .padding(.top, 15)
+                .padding(.vertical, 20)
                 
             
             ScrollView {
                 VStack (alignment: .leading) {
-                    ForEach (0 ..< 10, id: \.self) { _ in
-                        AddressScroll()
+                    ForEach (viewModel.results, id: \.self) { result in
+                        AddressScroll(name: result.title, address: result.subtitle)
+                            .onTapGesture {
+                                withAnimation(.spring()) {
+                                    showComment = true
+                                }
+                                
+                            }
                     }
                 }
-        }
-            .padding(.horizontal)
-            .padding(.top, 15)
+            }
+//            .padding(.horizontal)
+//            .padding(.top, 15)
         
         
         }
+        .padding()
         .background(.white)
         
     }
@@ -44,6 +54,6 @@ struct AddressListView: View {
 
 struct AddressListView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressListView()
+        AddressListView(showComment: .constant(false))
     }
 }
