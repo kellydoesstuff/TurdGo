@@ -10,15 +10,18 @@ struct MakeComment: View {
   
   var body: some View {
       ZStack{
-          Color("blue")
+       Image("map")
+              .resizable()
+//              .blur(radius: 1.5, opaque: true)
               .ignoresSafeArea()
           VStack {
               
               Spacer()
               
               Text("Rating")
-                .font(.custom("CarterOne", size: 50))
-                .foregroundColor(Color("yellow"))
+                .padding(.bottom, 10)
+                .font(.custom("CarterOne", size: 35))
+                .foregroundColor(Color("brown"))
                 
               
               // rating
@@ -31,7 +34,7 @@ struct MakeComment: View {
                     Image(systemName: index <= selectedRating ? "star.fill" : "star")
                           .resizable()
                           .frame(width: 50, height: 50)
-                          .foregroundColor(index <= selectedRating ? .yellow : Color("yellow"))
+                          .foregroundColor(index <= selectedRating ? Color("brown") : Color("darkYellow"))
                   }
                 }
               } .padding(.bottom, 30)
@@ -41,10 +44,11 @@ struct MakeComment: View {
                       .font(.headline)
                       .fontWeight(.bold)
                       
-                      .foregroundColor(Color("yellow"))
+                      .foregroundColor(Color("brown"))
               }
               .padding()
-              .background(Rectangle() .foregroundColor(Color("light")))
+              .frame(width:340)
+              .background(Rectangle() .foregroundColor(Color("offWhite")))
               .cornerRadius(10)
               
               
@@ -52,20 +56,22 @@ struct MakeComment: View {
                   Text("Wheel Chair Accessible")
                       .font(.headline)
                       .fontWeight(.bold)
-                      .foregroundColor(Color("yellow"))
+                      .foregroundColor(Color("brown"))
               }
               .padding()
-              .background(Rectangle() .foregroundColor(Color("light")))
+              .background(Rectangle() .foregroundColor(Color("offWhite")))
+              .frame(width:340)
               .cornerRadius(10)
               
               Toggle(isOn: $babyChangingStations) {
                   Text("Baby Changing Stations")
                       .font(.headline)
                       .fontWeight(.bold)
-                      .foregroundColor(Color("yellow"))
+                      .foregroundColor(Color("brown"))
               }
               .padding()
-              .background(Rectangle() .foregroundColor(Color("light")))
+              .frame(width:340)
+              .background(Rectangle() .foregroundColor(Color("offWhite")))
               .cornerRadius(10)
               
              
@@ -78,12 +84,13 @@ struct MakeComment: View {
               TextField(text: $review) {
                   Text("Comment")
                       .font(.headline)
-                      .foregroundColor(Color("yellow"))
+                      .foregroundColor(Color("brown"))
               }
               .multilineTextAlignment(.center)
+              .frame(width: 350)
               .font(.title)
-              .foregroundColor(Color("yellow"))
-              .border(Color.yellow, width: 1)
+              .foregroundColor(Color("brown"))
+              .border(Color.brown, width: 2)
               .padding()
               
 //              TextField("comment", text: $review)
@@ -98,11 +105,14 @@ struct MakeComment: View {
                 textTitle = "\(review)"
               }
               .font(.title2)
-              .foregroundColor(Color.yellow)
+              .foregroundColor(Color("brown"))
               .buttonStyle(.bordered)
               .tint(.yellow)
           //      }
         } //end of vstack
+          .background(Rectangle() .foregroundColor(Color("yellow")))
+          .cornerRadius(40)
+          .shadow(radius: 3)
       }
       
   }
