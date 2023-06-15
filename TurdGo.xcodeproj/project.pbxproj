@@ -121,6 +121,7 @@
 				BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */,
 				AFDF9E582A382F6100E60BB8 /* AddressListView.swift */,
 				BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */,
+				BD493C122A3B7DFC00C96C96 /* comment */,
 				BD772BC72A3B5BF600664A36 /* mic. */,
 			);
 			path = views;
@@ -152,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */,
-				BD493C122A3B7DFC00C96C96 /* comment */,
 			);
 			path = "Custom Fonts";
 			sourceTree = "<group>";

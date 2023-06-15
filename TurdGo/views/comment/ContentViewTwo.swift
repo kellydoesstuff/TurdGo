@@ -17,7 +17,6 @@ struct ContentViewTwo: View {
     
     var toDoItems: FetchedResults<ToDo>
     
-    
     @State private var showNewTask = false
     var body: some View {
         VStack {
@@ -42,8 +41,29 @@ struct ContentViewTwo: View {
             List {
                 ForEach (toDoItems) { toDoItem in
                   
-                    if toDoItem.isImportant == true {
+                    if (toDoItem.isImportant == true && toDoItem.isGenderNeutral == false && toDoItem.hasBabyChanging == false) {
+//                        emojis = emojis + "♿︎ "
+//                        emojis = "\(emojis)♿︎ "
                         Text("♿︎ " + (toDoItem.title ?? "No title"))
+                    }
+                    
+                    else if (toDoItem.isGenderNeutral == true && toDoItem.isImportant == false && toDoItem.hasBabyChanging == false) {
+                        Text("🧍‍♀️🧍‍♂️ " + (toDoItem.title ?? "No title"))
+                    }
+                    else if (toDoItem.hasBabyChanging == true && toDoItem.isGenderNeutral == false && toDoItem.isImportant == false) {
+                        Text("🍼 " + (toDoItem.title ?? "No title"))
+                    }
+                    else if (toDoItem.isGenderNeutral == true && toDoItem.isImportant == true && toDoItem.hasBabyChanging == false){
+                        Text("🧍‍♀️🧍‍♂️♿︎ " + (toDoItem.title ?? "No title"))
+                    }
+                    else if (toDoItem.isGenderNeutral == true && toDoItem.isImportant == false && toDoItem.hasBabyChanging == true) {
+                        Text("🧍‍♀️🧍‍♂️🍼 " + (toDoItem.title ?? "No title"))
+                    }
+                    else if (toDoItem.isGenderNeutral == false && toDoItem.isImportant == true && toDoItem.hasBabyChanging == true) {
+                        Text("♿︎🍼 " + (toDoItem.title ?? "No title"))
+                    }
+                    else if (toDoItem.isGenderNeutral == true && toDoItem.isImportant == true && toDoItem.hasBabyChanging == true) {
+                        Text("🧍‍♀️🧍‍♂️♿︎🍼 " + (toDoItem.title ?? "No title"))
                     }
                     else {
                         Text(toDoItem.title ?? "No title")
@@ -58,7 +78,7 @@ struct ContentViewTwo: View {
         } // Vstack ends
         
         if showNewTask {
-            NewToDoView(showNewTask: $showNewTask, title: "", isImportant: false)
+            NewToDoView(showNewTask: $showNewTask, title: "", isImportant: false, isGenderNeutral: false, hasBabyChanging: false)
         }
         
     }
@@ -83,3 +103,4 @@ struct ContentViewTwo: View {
         }
     }
 }
+
