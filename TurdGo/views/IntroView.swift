@@ -10,7 +10,8 @@ import SwiftUI
 struct IntroView: View {
     @State private var showLocations = false
     @State private var showComments = false
-   
+    @State private var locationName = ""
+    @State private var locationAddress = ""
 
     var body: some View {
         
@@ -31,13 +32,13 @@ struct IntroView: View {
                     .padding()
             } else {
                 // show locations
-                AddressListView(showComment: $showComments)
+                AddressListView(showComment: $showComments, locationName: $locationName, locationAddress: $locationAddress)
                     
             }
          
             if (showComments) {
                 withAnimation {
-                    MakeComment(showHome: $showLocations, showComments: $showComments, genderNeutral: false, wheelChairAccessible: false, babyChangingStations: false)
+                    MakeComment(showHome: $showLocations, showComments: $showComments, genderNeutral: false, wheelChairAccessible: false, babyChangingStations: false, locationName: locationName, locationAddress: locationAddress)
                 }
                 
             }

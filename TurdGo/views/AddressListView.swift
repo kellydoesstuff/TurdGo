@@ -10,7 +10,8 @@ import SwiftUI
 struct AddressListView: View {
     @State private var destinationLocation = ""
     @Binding var showComment : Bool
-//    @State var selectedLocation = ""
+    @Binding var locationName : String
+    @Binding var locationAddress : String
     @EnvironmentObject var viewModel : LocationSearchModel
     
     var body: some View {
@@ -35,6 +36,8 @@ struct AddressListView: View {
                         AddressScroll(name: result.title, address: result.subtitle)
                             .onTapGesture {
                                 viewModel.selectLocation(result)
+                                locationName = result.title
+                                locationAddress = result.subtitle
                                 withAnimation(.spring()) {
                                     showComment = true
                                     
@@ -57,6 +60,6 @@ struct AddressListView: View {
 
 struct AddressListView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressListView(showComment: .constant(false))
+        AddressListView(showComment: .constant(false), locationName: .constant(""), locationAddress: .constant(""))
     }
 }
