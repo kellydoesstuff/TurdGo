@@ -42,7 +42,7 @@ struct ContentViewTwo: View {
             List {
                 ForEach (toDoItems) { toDoItem in
                   
-                   if toDoItems.isImportant == true {
+                    if toDoItem.isImportant == true {
                         Text("♿︎ " + (toDoItem.title ?? "No title"))
                     }
                     else {
