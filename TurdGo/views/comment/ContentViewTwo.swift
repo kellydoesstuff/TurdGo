@@ -7,6 +7,7 @@
 //
 import SwiftUI
 
+
 struct ContentViewTwo: View {
     
     @Environment(\.managedObjectContext) var context
@@ -40,7 +41,8 @@ struct ContentViewTwo: View {
             
             List {
                 ForEach (toDoItems) { toDoItem in
-                    if toDoItem.isImportant == true {
+                  
+                   if toDoItems.isImportant == true {
                         Text("♿︎ " + (toDoItem.title ?? "No title"))
                     }
                     else {
