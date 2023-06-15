@@ -1,63 +1,57 @@
-//
+
 //  ContentView.swift
 //  TurdGo
 //
 //  Created by Kelly Bian on 6/12/23.
-//
+
+
+
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showNewView = false
+    @State private var name = ""
+
     var body: some View {
         NavigationStack {
-            ZStack{
-                Color("yellow")
+            ZStack {
+            Image("map")
+                    .resizable()
                     .ignoresSafeArea()
                 VStack {
-                    Text("TurdGo")
-                        .font(.custom("CarterOne", size: 90))
-                        .foregroundColor(Color("blue"))
-                    Text("Helping you find the best bathrooms on the go.")
-                        .padding(.bottom, 20)
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("blue"))
-                        .multilineTextAlignment(.center)
-                    
-                    
-                    HStack {
-                        Image("toilet")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                        NavigationLink(destination: IntroView()){
-                            Image(systemName: "arrow.right")
-                                .font(.title2)
+                    Text("Welcome to TurdGo!")
+                        .font(.title)
+                        .bold()
+                    TextField("", text: $name)
+                                  .disableAutocorrection(true)
+                                  .frame(width: 320)
+                                  .multilineTextAlignment(.center)
+                                  .font(.title)
+                                  .border(Color.black, width: 2.5)
+                                  .padding()
+                                NavigationLink(destination: NameView (name: name)) {
+                                  Text("Submit")
+                                    .bold()
+                                    .foregroundColor(.black)
+                              }
                                 .foregroundColor(.white)
-                                .padding()
-                                .background(Color("blue"))
-                                .clipShape(Circle())
-                                .shadow(color: .black, radius: 3)
-                            
-                        } //end of navlink
-                        
-                        
-                        
-
+                                .frame(width: 300, height: 50)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        //      Button("Submit Name") {
+                        //        SwiftUIView(username: name)
+                        //      }
+                            }
+                            .padding(.top, 70)
+                            .padding(.bottom, 70)
+                            .background(Rectangle()
+                              .foregroundColor(Color(.white)))
+                            .cornerRadius(40)
+                          }
+                        }
+                      }
                     }
-                        
-                } // end of vstack
-                .padding()
-    
-                
-            } // end of zstack
-
-            
-            
-        } // nav stack
-        
-        
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
