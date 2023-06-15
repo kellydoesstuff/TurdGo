@@ -23,6 +23,7 @@
 		BD762CE92A3A3FEA004D9386 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD762CE82A3A3FEA004D9386 /* ToDoItem.swift */; };
 		BD762CF02A3A44CD004D9386 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD762CEF2A3A44CD004D9386 /* Persistence.swift */; };
 		BD80E3AE2A3A35F500F1A385 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80E3AD2A3A35F500F1A385 /* NameView.swift */; };
+		BDB42D772A3B71EA00C1079E /* TurdGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDB42D752A3B71EA00C1079E /* TurdGo.xcdatamodeld */; };
 		BDEBEB5D2A38BBF1002ED40B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */; };
 		BDEBEB612A38C0D6002ED40B /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */; };
 		BDEBEBA52A38FC5C002ED40B /* MakeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBEBA42A38FC5C002ED40B /* MakeComment.swift */; };
@@ -46,6 +47,7 @@
 		BD762CE82A3A3FEA004D9386 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BD762CEF2A3A44CD004D9386 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BD80E3AD2A3A35F500F1A385 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		BDB42D762A3B71EA00C1079E /* TurdGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TurdGo.xcdatamodel; sourceTree = "<group>"; };
 		BDEBEB5C2A38BBF1002ED40B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		BDEBEB5E2A38C095002ED40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BDEBEB602A38C0D6002ED40B /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarterOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				BD762CE22A3A3F03004D9386 /* ContentViewTwo.swift */,
 				BD762CE82A3A3FEA004D9386 /* ToDoItem.swift */,
 				BD762CEF2A3A44CD004D9386 /* Persistence.swift */,
+				BDB42D752A3B71EA00C1079E /* TurdGo.xcdatamodeld */,
 			);
 			path = comment;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDF9E372A38030A00E60BB8 /* LocationManager.swift in Sources */,
+				BDB42D772A3B71EA00C1079E /* TurdGo.xcdatamodeld in Sources */,
 				BD762CF02A3A44CD004D9386 /* Persistence.swift in Sources */,
 				AFDF9E332A37FF2E00E60BB8 /* ContentView.swift in Sources */,
 				BD762CE92A3A3FEA004D9386 /* ToDoItem.swift in Sources */,
@@ -445,6 +449,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDB42D752A3B71EA00C1079E /* TurdGo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDB42D762A3B71EA00C1079E /* TurdGo.xcdatamodel */,
+			);
+			currentVersion = BDB42D762A3B71EA00C1079E /* TurdGo.xcdatamodel */;
+			path = TurdGo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFDF9E192A37F97400E60BB8 /* Project object */;
 }
