@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TurdGoApp: App {
+    @StateObject var locationViewModel = LocationSearchModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(locationViewModel)
         }
     }
 }

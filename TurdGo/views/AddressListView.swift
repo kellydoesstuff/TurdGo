@@ -10,7 +10,8 @@ import SwiftUI
 struct AddressListView: View {
     @State private var destinationLocation = ""
     @Binding var showComment : Bool
-    @StateObject var viewModel = LocationSearchModel()
+//    @State var selectedLocation = ""
+    @EnvironmentObject var viewModel : LocationSearchModel
     
     var body: some View {
         VStack {
@@ -33,8 +34,10 @@ struct AddressListView: View {
                     ForEach (viewModel.results, id: \.self) { result in
                         AddressScroll(name: result.title, address: result.subtitle)
                             .onTapGesture {
+                                viewModel.selectLocation(result)
                                 withAnimation(.spring()) {
                                     showComment = true
+                                    
                                 }
                                 
                             }

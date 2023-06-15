@@ -10,6 +10,8 @@ import SwiftUI
 struct IntroView: View {
     @State private var showLocations = false
     @State private var showComments = false
+   
+
     var body: some View {
         
         ZStack (alignment: .top) {
@@ -19,6 +21,7 @@ struct IntroView: View {
             // if you are not searching for location
             if (showLocations == false) {
                 // show button
+                let _ = print("hello")
                 LocationSearchView()
                     .onTapGesture { //when this is pressed ...
                         withAnimation {
@@ -31,10 +34,10 @@ struct IntroView: View {
                 AddressListView(showComment: $showComments)
                     
             }
-            
+         
             if (showComments) {
                 withAnimation {
-                    MakeComment(genderNeutral: false, wheelChairAccessible: false, babyChangingStations: false)
+                    MakeComment(showHome: $showLocations, showComments: $showComments, genderNeutral: false, wheelChairAccessible: false, babyChangingStations: false)
                 }
                 
             }
@@ -44,6 +47,7 @@ struct IntroView: View {
 //                .padding(.leading)
 //                .padding(.top, 4)
         }
+        .navigationBarBackButtonHidden(true)
         
     }
 }
